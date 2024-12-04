@@ -1,22 +1,48 @@
 # Wikipedia-Article-Classification
-Classify Wikipedia articles into categories using machine learning to improve search and recommendation systems.
 
-#Project Description
-The Wikipedia Article Classification project aims to develop a machine learning model to classify articles whether they are featured or not.
+This project uses machine learning models to classify Wikipedia articles based on their content. The dataset contains articles with text features such as "Summary", "Full Text", "Links", and "Categories". The goal is to predict whether an article belongs to a specific class ('FA' or 'Non-FA').
+Requirements
 
-#How to Run and Install The Project
-Download the project source code from a repository or website.
-Install the required dependencies or libraries.
-Set up any configuration files or environment variables required by the project.
-Run the project by executing the main script or command.
+pip install Wikipedia-API
+pip install imbalanced-learn
+pip install scikit-learn
+pip install xgboost
 
-#Post-Analysis Questions
-1. What’s the accuracy you are getting?
-Using the logistic regression model, we are getting 75% of accuracy.
+Data Processing
 
-2. What if you choose SVM instead of logistic regression?
-Using SVM instead of logistic regression can lead to different results in terms of model performance and interpretability,  However, SVM can be more computationally expensive than logistic regression, especially for large datasets. Additionally, SVMs can be less interpretable than logistic regression.
+    Loading and Cleaning Data:
+        Read and clean the dataset by handling missing values and duplicates.
+        Convert certain columns (like 'Sections') into numerical values.
+        Text columns are transformed into their lengths (Summary_Length, Full_Text_length).
 
-3.What features do you think are important? Can you get the same accuracy using only a
-single feature?
-It is possible to get an accuracy score using a single feature. For example, using only the number of categories, we can achieve an accuracy score of around 0.63.
+    Feature Engineering:
+        Count the number of links and categories in each article.
+
+    Encoding:
+        The 'Class' column is transformed into a binary label (Class_Binary).
+
+Exploratory Data Analysis (EDA)
+
+    Visualized class distribution with a bar chart showing class proportions.
+
+Model Training
+
+    Split the data into training and testing sets.
+    Apply Standard Scaling for feature normalization.
+    Use SMOTE for balancing the dataset.
+
+Models Used
+
+    Logistic Regression
+    Random Forest Classifier
+    SVM (Support Vector Machine)
+
+Each model is trained on the original and resampled datasets, and their performance is evaluated using accuracy and AUC scores.
+Results
+
+    Best Model: Random Forest with the highest accuracy (99.38%).
+    Feature Importance: Evaluates which features contribute most to model predictions.
+
+Observations
+
+    Using SMOTE decreased accuracy slightly, suggesting that the models perform better on the original dataset.
