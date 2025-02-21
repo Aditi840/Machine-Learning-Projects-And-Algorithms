@@ -29,16 +29,16 @@ Usage
 When you run the script, the chatbot will greet you and ask if you are willing to help it learn about Earth. You can respond with different phrases, and the chatbot will match your input against predefined rules to generate a response. You can exit the chat at any time by typing quit, exit, bye, etc.
 
 Example Interaction
-What is your name?
-> Aditi
-Hi Aditi, I am Rule-Bot. Will you help me learn about your planet?
-> Yes
-What technology do you have on this planet?
-> We have AI chatbots.
-Please tell me more.
-> Why are you here?
-I am here to collect data on your planet and its inhabitants.
-> Goodbye
-Okay, have a nice Earth day!
+- What is your name?
+- > Aditi
+- Hi Aditi, I am Rule-Bot. Will you help me learn about your planet?
+- > Yes
+- What technology do you have on this planet?
+- > We have AI chatbots.
+- Please tell me more.
+- > Why are you here?
+- I am here to collect data on your planet and its inhabitants.
+- > Goodbye
+- Okay, have a nice Earth day!
 
 
